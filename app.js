@@ -4,17 +4,16 @@ const createError = require("http-errors");
 const appConfig = require("./api/config/appConfig");
 
 const indexRouter = require("./bin");
-const usersRouter = require("./api/routes/users");
-const authenticate = require("./api/auth/authenticate-middleware");
 const authRouter = require("./api/auth/auth-router");
 const jokesRouter = require("./api/routes/jokes");
+
+const authenticate = require("./api/auth/authenticate-middleware");
 
 const app = express();
 appConfig(app);
 
 // routers
 app.use("/", indexRouter);
-app.use("/users", usersRouter);
 app.use("/api/auth", authRouter);
 app.use("/api/jokes", authenticate, jokesRouter);
 
