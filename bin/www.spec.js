@@ -3,7 +3,7 @@ const request = require("supertest");
 const server = require("../app");
 
 describe("GET /", () => {
-  it("should return 200 OK", async function() {
+  it("should return 200 OK", async () => {
     await request(server)
       .get("/")
       .then(res => {
