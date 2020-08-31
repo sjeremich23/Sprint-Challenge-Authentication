@@ -40,11 +40,20 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 - [ ] What is the purpose of using _sessions_?
 
+  - Sessions allow the user to be logged until their session is expired
+
 - [ ] What does bcrypt do to help us store passwords in a secure manner.
+
+  - Bycrypt is used to turns the password into a mix/hash combination of letters, numbers and symbols so you cannot read the password
 
 - [ ] What does bcrypt do to slow down attackers?
 
+  - The passwords will be hashed and makes it harder to decode
+
 - [ ] What are the three parts of the JSON Web Token?
+  - Header
+  - Payload
+  - Signature
 
 ## Minimum Viable Product
 
